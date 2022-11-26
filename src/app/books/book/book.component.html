@@ -1,6 +1,7 @@
 <li class="book-list">
-    <img [src]="book.image" [alt]="book.name" width="50px" />
-    <p>{{ book.name | titlecase }} by {{ book.author | titlecase }} </p>
-    <p>{{book.amount | currency:'INR'}}</p>
-    <button (click)="handleBook()" >Add to Card</button>
-  </li>
+  <img [src]="book.image" [alt]="book.name" width="50px" />
+  <p>{{ book.name | titlecase }} by {{ book.author | titlecase }}</p>
+  <p>{{ book.amount | currency: "INR" }}</p>
+  <button *ngIf="!isInCart" (click)="addToCart(book)">Add to Cart</button>
+  <button *ngIf="isInCart" (click)="removeFromCart(book)">Remove From Cart</button>
+</li>

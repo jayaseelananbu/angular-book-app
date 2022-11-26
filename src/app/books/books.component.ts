@@ -17,6 +17,4 @@ export class BooksComponent implements OnInit {
   }
 
   isShowing: boolean = true;
-
-  addTocard(book: Book) {}
 }
