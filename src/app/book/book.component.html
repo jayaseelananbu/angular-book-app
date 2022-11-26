@@ -1,0 +1,6 @@
+<li class="book-list">
+    <img [src]="book.image" [alt]="book.name" width="50px" />
+    <p>{{ book.name | titlecase }} by {{ book.author | titlecase }} </p>
+    <p>{{book.amount | currency:'INR'}}</p>
+    <button (click)="handleBook()" >Add to Card</button>
+  </li>
